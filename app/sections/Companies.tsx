@@ -1,4 +1,4 @@
-import SimpleCard from "../components/CompanyCard";
+import CompanyCard from "../components/CompanyCard";
 
 export default function Companies() {
     return (
@@ -7,15 +7,13 @@ export default function Companies() {
                 <h2 className="text-3xl font-bold mb-3">Companies I have worked with</h2>
                 <p className="text-foreground-muted">I've had the privilege of collaborating with these organizations to deliver impactful solutions.</p>
             </div>
-            <div className="relative">
-                <div className="grid grid-cols-6 gap-4">
-                    <SimpleCard company="Info Support" link="https://www.infosupport.com/en/" />
-                    <SimpleCard company="SUE" link="https://sue.nl/" />
-                    <SimpleCard company="MK Educatie" link="https://mkeducatie.nl/" />
-                    <SimpleCard company="Bas World" link="https://www.basworld.com/"/>
-                    <SimpleCard company="PodoPrinter" link="https://podoprinter.com/"/>
-                    <SimpleCard company="Author-e" link="https://www.authore.com/"/>
-                </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4 justify-items-center">
+                <CompanyCard company="Info Support" link="https://www.infosupport.com/en/" imageUrl="/assets/companies/info-support.png" />
+                <CompanyCard company="SUE" link="https://sue.nl/" imageUrl="/assets/companies/sue.png" />
+                <CompanyCard company="MK Educatie" link="https://mkeducatie.nl/" imageUrl="/assets/companies/mk-educatie.png" />
+                <CompanyCard company="Bas World" link="https://www.basworld.com/" imageUrl="/assets/companies/bas-world.png" />
+                <CompanyCard company="PodoPrinter" link="https://podoprinter.com/" imageUrl="/assets/companies/podoprinter.png" />
+                <div className="lg:hidden xl:block "><CompanyCard company="Author-e" link="https://www.authore.com/" imageUrl="/assets/companies/author-e.png" /></div>
             </div>
         </>
     )
