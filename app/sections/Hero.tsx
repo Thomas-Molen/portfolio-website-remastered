@@ -55,7 +55,7 @@ export default function Hero() {
               </svg>
             } />
         </a>
-        <a href="#projects">
+        <a href="#projects" className="sm:hidden lg:block">
           <AchievementCard
             title="Completed Projects"
             body="10+"
