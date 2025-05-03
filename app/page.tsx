@@ -1,5 +1,6 @@
 import Hero from "./sections/Hero"
 import Companies from "./sections/Companies"
+import AboutMe from "./sections/AboutMe"
 
 export default function Page() {
   return (
@@ -14,8 +15,10 @@ export default function Page() {
           <Companies />
         </div>
       </section>
-      <section id="about-me">
-
+      <section id="about-me" className="py-24">
+        <div className="container xl:max-w-7xl px-5 mx-auto">
+          <AboutMe />
+        </div>
       </section>
       <section id="projects">
 
