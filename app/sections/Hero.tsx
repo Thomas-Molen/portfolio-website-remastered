@@ -4,7 +4,7 @@ import AchievementCard from "../components/AchievementCard"
 export default function Hero() {
   return (
     <>
-      <div className="flex flex-col md:flex-row gap-16 items-center md:min-h-96">
+      <div className="flex flex-col md:flex-row gap-16 items-center md:min-h-96 mb-12 sm:mb-18 md:mb-0">
         <div className="flex-1 space-y-4">
           <h1 className="text-6xl font-bold tracking-tight">
             Software Engineer & <br /><span className="text-primary">Consultant</span>
@@ -30,19 +30,19 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="flex-1">
-          {/* <div className="relative w-96 h-96 overflow-hidden">
-          <Image
-          src="/assets/profile-picture.png"
-          alt="Thomas Van der Molen"
-          fill
-          className=""
-          priority
-          />
-          </div> */}
-        </div>
+        {/* <div className="flex-1">
+          <div className="relative w-96 h-96 overflow-hidden">
+            <Image
+              src="/assets/profile-picture.png"
+              alt="Thomas Van der Molen"
+              fill
+              className=""
+              priority
+            />
+          </div>
+        </div> */}
       </div>
-      <div className="mt-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
         <a href="/files/CV-Thomas-Van-der-Molen.pdf" target="_blank">
           <AchievementCard
             title="Academic Achievement"

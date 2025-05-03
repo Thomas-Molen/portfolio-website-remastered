@@ -17,7 +17,8 @@ export default function CompanyCard({ company, link, imageUrl }: CompanyCardProp
           <Image
             src={imageUrl}
             alt={company}
-            fill
+            fill 
+            sizes="(max-width: 640px) 158px, 190px"
             className="opacity-0 group-hover:opacity-20 transition-opacity duration-300 object-contain"
             priority
           />)

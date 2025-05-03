@@ -5,7 +5,7 @@ export default function AboutMe() {
     return (
         <>
             <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-10">
                 <div className="text-lg font-medium space-y-4">
                     <p>
                         My name is Thomas Van der Molen, and I am a Dutch software engineer
