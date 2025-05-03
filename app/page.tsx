@@ -15,7 +15,7 @@ export default function Page() {
           <Companies />
         </div>
       </section>
-      <section id="about-me" className="py-24">
+      <section id="about-me" className="py-16">
         <div className="container xl:max-w-7xl px-5 mx-auto">
           <AboutMe />
         </div>
