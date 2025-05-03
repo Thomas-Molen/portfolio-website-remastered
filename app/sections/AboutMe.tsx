@@ -29,8 +29,10 @@ export default function AboutMe() {
                 </div>
                 <div>
                     <div className="border border-muted rounded-md p-5">
-                        <h3 className="text-2xl font-bold">Technology Expertise</h3>
-                        <p className="text-foreground-muted mb-4">Expertise in enterprise technologies</p>
+                        <div className="text-center xl:text-left">
+                            <h3 className="text-2xl font-bold">Technology Expertise</h3>
+                            <p className="text-foreground-muted mb-4">Expertise in enterprise technologies</p>
+                        </div>
                         <TechnologyOverview />
                     </div>
                 </div>

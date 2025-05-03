@@ -44,8 +44,8 @@ export default function TechnologyOverview() {
 
     function ExperienceChart(data: TechnologyData[]) {
         return (
-            <ResponsiveContainer width="100%" aspect={1.8} className="p-4">
-                <BarChart layout="vertical" data={data} margin={{ left: 40, top: 10 }}>
+            <ResponsiveContainer width="100%" aspect={1} className="mt-4" maxHeight={300}>
+                <BarChart layout="vertical" data={data} margin={{ left: 30, top: 10 }}>
                     {data.map((entry, index) =>
                         <ReferenceLine
                             key={index}
