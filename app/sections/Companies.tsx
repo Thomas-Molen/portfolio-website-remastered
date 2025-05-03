@@ -11,7 +11,7 @@ export default function Companies() {
                 <CompanyCard company="Info Support" link="https://www.infosupport.com/en/" imageUrl="/assets/companies/info-support.png" />
                 <CompanyCard company="SUE" link="https://sue.nl/" imageUrl="/assets/companies/sue.png" />
                 <CompanyCard company="MK Educatie" link="https://mkeducatie.nl/" imageUrl="/assets/companies/mk-educatie.png" />
-                <CompanyCard company="Bas World" link="https://www.basworld.com/" imageUrl="/assets/companies/bas-world.png" />
+                <CompanyCard company="BAS World" link="https://www.basworld.com/" imageUrl="/assets/companies/bas-world.png" />
                 <CompanyCard company="PodoPrinter" link="https://podoprinter.com/" imageUrl="/assets/companies/podoprinter.png" />
                 <CompanyCard company="Author-e" link="https://www.authore.com/" imageUrl="/assets/companies/author-e.png" />
             </div>
