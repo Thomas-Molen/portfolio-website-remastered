@@ -42,7 +42,7 @@ export default function Hero() {
           </div>
         </div> */}
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-3">
         <a href="/files/CV-Thomas-Van-der-Molen.pdf" target="_blank">
           <AchievementCard
             title="Academic Achievement"

@@ -5,7 +5,9 @@ import React from "react";
 export interface ViewOption<T> {
     label: string;
     value: T;
+    color?: string;
 }
+const _defaultColor = "var(--color-background)";
 
 interface ViewSelectorProps<T> {
     options: ViewOption<T>[];
@@ -24,12 +26,16 @@ export function ViewSelector<T>({
                 const isSelected = option.value === selected;
 
                 return isSelected ? (
-                    <div key={String(option.value)} className="flex items-center justify-center rounded-sm py-1 w-full bg-background">
+                    <div key={String(option.value)} className="flex items-center justify-center rounded-sm py-1 w-full"
+                        style={{ backgroundColor: option.color ?? _defaultColor }}>
                         <p className="text-center">{option.label}</p>
                     </div>
                 ) : (
-                    <div key={String(option.value)} className="flex items-center justify-center py-1">
-                        <p className="text-center text-foreground-muted cursor-pointer" onClick={() => onSelect(option.value)}>
+                    <div key={String(option.value)} className="relative group flex items-center justify-center rounded-sm py-1 w-full overflow-hidden cursor-pointer"
+                        onClick={() => onSelect(option.value)}>
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                            style={{ backgroundColor: option.color ?? _defaultColor }} />
+                        <p className="relative z-10 text-center text-opacity-100 pointer-events-none">
                             {option.label}
                         </p>
                     </div>

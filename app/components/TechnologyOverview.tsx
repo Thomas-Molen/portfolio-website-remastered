@@ -37,12 +37,12 @@ const _otherData: TechnologyData[] = [
 export default function TechnologyOverview() {
     const [selectedView, setSelectedView] = useState("languages");
     const viewOptions: ViewOption<"languages" | "frameworks" | "other">[] = [
-        { label: "Languages", value: "languages" },
-        { label: "Frameworks", value: "frameworks" },
-        { label: "Cloud & DevOps", value: "other" }
+        { label: "Languages", value: "languages", color: "#9a4d99" },
+        { label: "Frameworks", value: "frameworks", color: "#2f7f6e" },
+        { label: "Cloud & DevOps", value: "other", color: "#4b4a99" }
     ];
 
-    function ExperienceChart(data: TechnologyData[]) {
+    function ExperienceChart(data: TechnologyData[], color: string) {
         return (
             <ResponsiveContainer width="100%" aspect={1} className="mt-4" maxHeight={300}>
                 <BarChart layout="vertical" data={data} margin={{ left: 30, top: 10 }}>
@@ -56,20 +56,22 @@ export default function TechnologyOverview() {
                     }
                     <XAxis type="number" tick={false} label={{ value: "Experience" }} />
                     <YAxis type="category" dataKey="key" />
-                    <Bar dataKey="value" fill="currentColor" className="text-primary brightness-85" />
+                    <Bar dataKey="value" fill={ color } />
                 </BarChart>
             </ResponsiveContainer>
         )
     }
 
     function View() {
+        const color = viewOptions.find(o => o.value == selectedView)?.color ?? "var(--color-primary)";
+
         switch (selectedView) {
             case "languages":
-                return ExperienceChart(_languageData);
+                return ExperienceChart(_languageData, color);
             case "frameworks":
-                return ExperienceChart(_frameworkData);
+                return ExperienceChart(_frameworkData, color);
             case "other":
-                return ExperienceChart(_otherData);
+                return ExperienceChart(_otherData, color);
             default:
                 return <></>
         }
