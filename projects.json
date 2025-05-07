@@ -1,0 +1,23 @@
+[
+    {
+      "project": "ECOFED",
+      "company": "IPCEI-CIS | Info Support",
+      "body": "Lorem Ipsum.",
+      "technologies": [".NET", "Angular", "Docker", "Kubernetes"],
+      "date": {
+        "start": "2024-10-30",
+        "end": "2025-05-02"
+      }
+    },
+    {
+      "project": "ECOFED 3",
+      "company": "IPCEI-CIS | Info Support",
+      "body": "Lorem Ipsum.",
+      "technologies": [".NET", "Angular", "Docker", "Kubernetes"],
+      "date": {
+        "start": "2024-10-30",
+        "end": "2025-05-02"
+      }
+    }
+  ]
+  

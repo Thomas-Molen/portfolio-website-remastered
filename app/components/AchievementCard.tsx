@@ -6,7 +6,7 @@ interface AchievementCardProps {
     body: string;
     description: string;
     icon?: React.ReactNode;
-    appearDelay?: string;
+    appearDelay: string;
 }
 
 export default function AchievementCard({title, body, description, icon, appearDelay = "0s"}: AchievementCardProps) {
