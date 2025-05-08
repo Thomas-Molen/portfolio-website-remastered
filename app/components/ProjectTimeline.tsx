@@ -52,3 +52,21 @@ function TimelineItem({ project, selected, onClick }: TimelineItemProps) {
     </div>
   )
 }
+
+export function SkeletonProjectTimeline() {
+  return (
+    <div className="h-full">
+      <div className="h-full flex flex-row gap-2 animate-pulse">
+        <div className="h-full w-8 rounded bg-muted"></div>
+        <div className="flex-1 space-y-6">
+          <div className="h-10 rounded bg-muted"></div>
+          <div className="h-10 rounded bg-muted"></div>
+          <div className="h-10 rounded bg-muted"></div>
+          <div className="h-10 rounded bg-muted"></div>
+          <div className="h-10 rounded bg-muted"></div>
+          <div className="h-10 rounded bg-muted"></div>
+        </div>
+      </div>
+    </div>
+  )
+}

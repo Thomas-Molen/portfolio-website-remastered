@@ -1,17 +1,18 @@
 "use client"
 
 import { Suspense, useEffect, useState } from "react";
-import ProjectCard from "../components/ProjectCard"
-import { ProjectTimeline } from "../components/ProjectTimeline";
+import ProjectCard, { SkeletonProjectCard } from "../components/ProjectCard"
+import { ProjectTimeline, SkeletonProjectTimeline } from "../components/ProjectTimeline";
 import _projects from "@/projects.json"
 import type Project from "@/types/project"
 import { useSearchParams, useRouter } from "next/navigation";
 
 export default function Projects() {
+    const [selectedProject, setSelectedProject] = useState<Project | undefined>(undefined);
+
     function TimelineView() {
         const queryParams = useSearchParams();
         const router = useRouter();
-        const [selectedProject, setSelectedProject] = useState<Project>(_projects[0]);
 
         useEffect(() => {
             const queryProject = queryParams.get("project");
@@ -19,7 +20,9 @@ export default function Projects() {
             if (queryProject) {
                 const preferedProject = _projects.find(p => p.project === queryProject);
                 if (preferedProject) setSelectedProject(preferedProject);
+                else setSelectedProject(_projects[0]);
             }
+            else setSelectedProject(_projects[0]);
         }, [queryParams])
 
         function SelectProject(project: Project) {
@@ -35,24 +38,32 @@ export default function Projects() {
         return (
             <div className="hidden md:grid md:grid-cols-8 xl:grid-cols-10 gap-x-8" >
                 <div className="col-span-4 h-[470px] lg:h-[400px]">
-                    <ProjectCard project={selectedProject} />
+                    {selectedProject ?
+                        <ProjectCard project={selectedProject} />
+                        :
+                        <SkeletonProjectCard />
+                    }
                 </div>
                 <div className="col-span-4">
-                    <ProjectTimeline
-                        projects={_projects}
-                        onSelect={(selectedProject => SelectProject(selectedProject))}
-                        selectedProject={selectedProject} />
+                    {selectedProject ?
+                        <ProjectTimeline
+                            projects={_projects}
+                            onSelect={(selectedProject => SelectProject(selectedProject))}
+                            selectedProject={selectedProject} />
+                        :
+                        <SkeletonProjectTimeline />
+                    }
                 </div>
             </div>
         )
     }
 
     return (
-        <Suspense>
+        <>
             <h2 className="text-3xl font-bold text-center mb-16">Projects Portfolio</h2>
             <Suspense>
                 <TimelineView />
             </Suspense>
-        </Suspense>
+        </>
     )
 }

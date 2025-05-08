@@ -42,3 +42,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
     )
 }
+
+export function SkeletonProjectCard() {
+    return (
+        <div className="border border-muted rounded-md p-6 h-full">
+            <div className="flex animate-pulse">
+                <div className="flex-1 space-y-6">
+                    <div className="h-5 rounded bg-muted"></div>
+                    <div className="h-20 rounded bg-muted"></div>
+                    <div className="h-15 rounded bg-muted"></div>
+                </div>
+            </div>
+        </div>
+    )
+}
