@@ -42,7 +42,7 @@ function TimelineItem({ project, selected, onClick }: TimelineItemProps) {
 
       <div className={`group flex justify-between items-center ml-10 px-4 rounded-lg w-full transition-normal duration-300 ${selected ? "" : " hover:"}bg-muted`}>
         <div>
-          <p className={selected ? "text-primary" : "text-foreground"}>{project.project}</p>
+          <p className="text-foreground">{project.project}</p>
           <p className="text-sm text-foreground-muted">{project.company}</p>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className={`size-4 transition-opacity ${selected ? "" : "invisible group-hover:visible"}`}>

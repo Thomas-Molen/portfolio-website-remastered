@@ -1,23 +1,145 @@
 [
-    {
-      "project": "ECOFED",
-      "company": "IPCEI-CIS | Info Support",
-      "body": "Lorem Ipsum.",
-      "technologies": [".NET", "Angular", "Docker", "Kubernetes"],
-      "date": {
-        "start": "2024-10-30",
-        "end": "2025-05-02"
-      }
+  {
+    "project": "ECOFED",
+    "company": "IPCEI-CIS | Info Support",
+    "body": [
+      "As part of the ECOFED project, I helped develop automated strategies for migrating complex cloud-native applications between Cloud Service Providers with minimal downtime.",
+      "In collaboration with consortium partners, I contributed to Kubernetes stack migrations and spearheaded real-time PostgreSQL replication, supporting open European cloud standards."
+    ],
+    "technologies": [
+      ".NET",
+      "Angular",
+      "Docker",
+      "Kubernetes",
+      "PostgreSQL",
+      "Keycloak",
+      "Kafka"
+    ],
+    "date": {
+      "start": "2024-11",
+      "end": "2025-05"
     },
-    {
-      "project": "ECOFED 3",
-      "company": "IPCEI-CIS | Info Support",
-      "body": "Lorem Ipsum.",
-      "technologies": [".NET", "Angular", "Docker", "Kubernetes"],
-      "date": {
-        "start": "2024-10-30",
-        "end": "2025-05-02"
-      }
-    }
-  ]
-  
+    "nda": true
+  },
+  {
+    "project": "Cloud Networking Threat Detection",
+    "company": "SUE",
+    "body": [
+      "Led a research team to develop an AI-driven method for detecting and notifying malicious network behavior in cloud environments of SUE clients.",
+      "Built on research papers from TU Delft and innovative transformer models to analyze networking logs and enhance cloud security response."
+    ],
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Pandas",
+      "Streamlit",
+      "AWS",
+      "DVC",
+      "Jupyter Notebook"
+    ],
+    "date": {
+      "start": "2023-08",
+      "end": "2024-01"
+    },
+    "nda": false
+  },
+  {
+    "project": "Web-based 3D Printing Platform",
+    "company": "PodoPrinter",
+    "body": [
+      "Developed a web-based 3D printing solution for PodoPrinter’s own line of 3D printers. The platform features a cloud slicer, model analysis tools, and remote printing capabilities, enabling global access, enhancing usability, and supporting a secure cloud infrastructure.",
+      "Enabling PodoPrinter to expand into a broader global market."
+    ],
+    "technologies": [
+      ".NET",
+      "Fast API",
+      "React",
+      "Vite",
+      "Vitest",
+      "Cura",
+      "Make",
+      "Azure",
+      "Docker"
+    ],
+    "date": {
+      "start": "2023-02",
+      "end": "2023-06"
+    },
+    "nda": false
+  },
+  {
+    "project": "Business-Oriented Software Development",
+    "company": "MK Educatie, Klantfocus, Simac | Author-e",
+    "body": [
+      "As a lead developer at Author-e, I played a key role in delivering efficient and maintainable software solutions for diverse business clients.",
+      "I architected new systems, maintained existing solutions, and collaborated closely with stakeholders to align solutions with evolving business needs."
+    ],
+    "technologies": [
+      ".NET",
+      "Blazor"
+    ],
+    "date": {
+      "start": "2022-08",
+      "end": "2024-01"
+    },
+    "nda": true
+  },
+  {
+    "project": "Travel Time Prediction Optimizer",
+    "company": "Jugo",
+    "body": [
+      "Led the development of a machine learning model to predict optimal travel times for Jugo consultants, improving productivity and reducing environmental impact.",
+      "The project involved extensive data analysis and explored the integration of AI-driven solutions within the company."
+    ],
+    "technologies": [
+      "Python",
+      "Pandas",
+      "Seaborn",
+      "SciKit Learn",
+      "Jupyter Notebook"
+    ],
+    "date": {
+      "start": "2022-02",
+      "end": "2022-07"
+    },
+    "nda": false
+  },
+  {
+    "project": "License Management System",
+    "company": "Stuurmen",
+    "body": [
+      "Collaborated with a talented team to create a fully automated license management system for Stuurmen/OneBlinq’s design tool plugins.",
+      "The system streamlined license delivery, integrated with their webshop, and ensured scalability, reliability, and customer engagement through trial management."
+    ],
+    "technologies": [
+      ".NET",
+      "React",
+      "Cypress",
+      "SQL Server",
+      "Azure",
+      "Netlify"
+    ],
+    "date": {
+      "start": "2021-08",
+      "end": "2022-01"
+    },
+    "nda": false
+  },
+  {
+    "project": "Internal Support Ticketing System",
+    "company": "BAS World",
+    "body": [
+      "Worked closely with a team to develop an internal support ticketing system for BAS Trucks, later BAS World.",
+      "The system significantly streamlined internal processes and was ultimately chosen over competing implementations as the preferred organization-wide solution, improving operational efficiency."
+    ],
+    "technologies": [
+      "Laravel",
+      "MySQL"
+    ],
+    "date": {
+      "start": "2021-02",
+      "end": "2021-06"
+    },
+    "nda": false
+  }
+]

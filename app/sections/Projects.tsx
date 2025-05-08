@@ -13,10 +13,10 @@ export default function Projects() {
         <>
             <h2 className="text-3xl font-bold text-center mb-16">Projects Portfolio</h2>
             <div className="grid grid-cols-10 gap-x-8">
-                <div className="col-span-4">
+                <div className="col-span-4 h-[400px]">
                     <ProjectCard project={selectedProject} />
                 </div>
-                <div className="col-span-4 h-[500px]">
+                <div className="col-span-4">
                     <ProjectTimeline 
                         projects={_projects}
                         onSelect={(selectedProject => setSelectedProject(selectedProject))}
