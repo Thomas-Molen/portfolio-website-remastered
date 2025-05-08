@@ -35,7 +35,7 @@ const _otherData: TechnologyData[] = [
 ]
 
 export default function TechnologyOverview() {
-    const [selectedView, setSelectedView] = useState("languages");
+    const [selectedView, setSelectedView] = useState("frameworks");
     const viewOptions: ViewOption<"languages" | "frameworks" | "other">[] = [
         { label: "Languages", value: "languages", color: "#9a4d99" },
         { label: "Frameworks", value: "frameworks", color: "#2f7f6e" },

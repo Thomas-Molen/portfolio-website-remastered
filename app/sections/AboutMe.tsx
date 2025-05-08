@@ -22,7 +22,7 @@ export default function AboutMe() {
                         successfully investigating and executing projects across various domains alongside other like-minded, enthusiastic professionals.
                     </p>
                     <div className="space-y-2 text-sm">
-                        <Badge body="Microsoft Certified: Azure Developer Associate (AZ-204)" />
+                        <Badge body="Microsoft Certified: Azure Developer (AZ-204)" />
                         <Badge body="BSc Software Engineering (Summa Cum Laude)" />
                         <Badge body="BSc Artificial Intelligence (Summa Cum Laude)" />
                     </div>
