@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import ProjectCard, { SkeletonProjectCard } from "../components/ProjectCard"
-import { ProjectTimeline, SkeletonProjectTimeline } from "../components/ProjectTimeline";
+import { ProjectTimeline } from "../components/ProjectTimeline";
 import _projects from "@/projects.json"
 import type Project from "@/types/project"
 

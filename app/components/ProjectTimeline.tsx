@@ -21,7 +21,7 @@ export function ProjectTimeline({ projects, onSelect, selectedProject }: Project
       onSelect(preferedProject);
     }
     else onSelect(projects[0]);
-  }, [queryParams])
+  }, [])
 
   function SelectProject(project: Project) {
     onSelect(project);
