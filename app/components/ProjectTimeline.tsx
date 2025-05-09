@@ -26,11 +26,11 @@ export function ProjectTimeline({ projects, onSelect, selectedProject }: Project
   function SelectProject(project: Project) {
     onSelect(project);
 
-    const fragmentIdentifier = window.location.hash; // Explicitely store fragment identifier as next navigation will void it
+    // const fragmentIdentifier = window.location.hash; // Explicitely store fragment identifier as next navigation will void it
 
-    const currentSearchParams = new URLSearchParams(queryParams as URLSearchParams);
-    currentSearchParams.set("project", project.project);
-    router.replace(`${window.location.pathname}?${currentSearchParams.toString()}${fragmentIdentifier}`, { scroll: false });
+    // const currentSearchParams = new URLSearchParams(queryParams as URLSearchParams);
+    // currentSearchParams.set("project", project.project);
+    // router.replace(`${window.location.pathname}?${currentSearchParams.toString()}${fragmentIdentifier}`, { scroll: false });
   }
 
   if (selectedProject === undefined) {
