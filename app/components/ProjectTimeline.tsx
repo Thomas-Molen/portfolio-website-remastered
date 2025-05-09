@@ -1,58 +1,28 @@
 import type React from "react"
 import type Project from "@/types/project"
-import { useSearchParams, useRouter } from "next/navigation"
-import { useEffect } from "react"
 
 interface ProjectTimelineProps {
   projects: Project[]
   onSelect: (project: Project) => void
-  selectedProject: Project | undefined
+  selectedProject: Project
 }
 
 export function ProjectTimeline({ projects, onSelect, selectedProject }: ProjectTimelineProps) {
-  const queryParams = useSearchParams();
-  const router = useRouter();
+  return (
+    <div className="relative">
+      <div className="absolute left-4 top-0 h-full w-px bg-muted transform -translate-x-1/2"></div>
 
-  useEffect(() => {
-    const queryProject = queryParams.get("project");
-
-    if (queryProject) {
-      const preferedProject = projects.find(p => p.project === queryProject) ?? projects[0];
-      onSelect(preferedProject);
-    }
-    else onSelect(projects[0]);
-  }, [])
-
-  function SelectProject(project: Project) {
-    onSelect(project);
-
-    // const fragmentIdentifier = window.location.hash; // Explicitely store fragment identifier as next navigation will void it
-
-    // const currentSearchParams = new URLSearchParams(queryParams as URLSearchParams);
-    // currentSearchParams.set("project", project.project);
-    // router.replace(`${window.location.pathname}?${currentSearchParams.toString()}${fragmentIdentifier}`, { scroll: false });
-  }
-
-  if (selectedProject === undefined) {
-    return <SkeletonProjectTimeline />
-  }
-  else {
-    return (
-      <div className="relative">
-        <div className="absolute left-4 top-0 h-full w-px bg-muted transform -translate-x-1/2"></div>
-
-        <div className="space-y-5">
-          {projects.map((project, index) => (
-            <TimelineItem
-              key={index}
-              project={project}
-              selected={project == selectedProject}
-              onClick={() => SelectProject(project)} />
-          ))}
-        </div>
+      <div className="space-y-5">
+        {projects.map((project, index) => (
+          <TimelineItem
+            key={index}
+            project={project}
+            selected={project == selectedProject}
+            onClick={() => onSelect(project)} />
+        ))}
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 interface TimelineItemProps {
