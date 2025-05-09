@@ -15,15 +15,13 @@ export default function Projects() {
         const router = useRouter();
 
         useEffect(() => {
-            const queryProject = queryParams.get("project");
+            if (selectedProject) return;
 
-            if (queryProject) {
-                const preferedProject = _projects.find(p => p.project === queryProject);
-                if (preferedProject) setSelectedProject(preferedProject);
-                else setSelectedProject(_projects[0]);
-            }
-            else setSelectedProject(_projects[0]);
-        }, [queryParams])
+            const queryProject = queryParams.get("project");
+            const preferredProject = _projects.find(p => p.project === queryProject);
+
+            setSelectedProject(preferredProject ?? _projects[0]);
+        }, [queryParams, selectedProject])
 
         function SelectProject(project: Project) {
             setSelectedProject(project);
