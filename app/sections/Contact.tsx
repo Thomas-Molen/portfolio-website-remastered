@@ -5,7 +5,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
                 <p className="text-foreground-muted">Always happy to connect and chat. Feel free to reach out anytime.</p>
             </div>
-            <div className="flex justify-center items-center gap-6 mt-6">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-x-4 gap-y-2 mt-6">
                 <a href="mailto:thomasmolenbusiness@gmail.com"
                     className="bg-primary inline-flex items-center gap-2 py-2 px-4 rounded-md hover:bg-primary/90 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.2} stroke="currentColor" className="size-4">
