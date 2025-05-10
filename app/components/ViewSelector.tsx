@@ -21,7 +21,8 @@ export function ViewSelector<T>({
     onSelect
 }: ViewSelectorProps<T>) {
     return (
-        <div className={`rounded-sm bg-background-muted grid grid-cols-${options.length} justify-items-center p-1 gap-x-1`}>
+        <div className={`rounded-sm bg-background-muted grid justify-items-center p-1 gap-x-1`}
+            style={{ gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` }}>
             {options.map((option) => {
                 if (option.value === selected) return (
                     <div key={String(option.value)} className="flex items-center justify-center rounded-sm py-1 w-full"
