@@ -44,6 +44,23 @@
     "nda": false
   },
   {
+    "project": "Business-Oriented Software Development",
+    "company": "MK Educatie, Klantfocus, Simac | Author-e",
+    "body": [
+      "As a lead developer at Author-e, I played a key role in delivering efficient and maintainable software solutions for diverse business clients.",
+      "I architected new systems, maintained existing solutions, and collaborated closely with stakeholders to align solutions with evolving business needs."
+    ],
+    "technologies": [
+      ".NET",
+      "Blazor"
+    ],
+    "date": {
+      "start": "2022-08",
+      "end": "2024-01"
+    },
+    "nda": true
+  },
+  {
     "project": "Web-based 3D Printing Platform",
     "company": "PodoPrinter",
     "body": [
@@ -66,23 +83,6 @@
       "end": "2023-06"
     },
     "nda": false
-  },
-  {
-    "project": "Business-Oriented Software Development",
-    "company": "MK Educatie, Klantfocus, Simac | Author-e",
-    "body": [
-      "As a lead developer at Author-e, I played a key role in delivering efficient and maintainable software solutions for diverse business clients.",
-      "I architected new systems, maintained existing solutions, and collaborated closely with stakeholders to align solutions with evolving business needs."
-    ],
-    "technologies": [
-      ".NET",
-      "Blazor"
-    ],
-    "date": {
-      "start": "2022-08",
-      "end": "2024-01"
-    },
-    "nda": true
   },
   {
     "project": "Travel Time Prediction Optimizer",
