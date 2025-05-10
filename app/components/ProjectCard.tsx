@@ -3,11 +3,12 @@ import Badge from "./Badge";
 
 interface ProjectCardProps {
     project: Project
+    className?: string
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, className = "" }: ProjectCardProps) {
     return (
-        <div className="bg-background border border-muted rounded-md p-6 h-full space-y-4 overflow-hidden">
+        <div className={"bg-background border border-muted rounded-md p-6 h-full space-y-4 overflow-hidden " + className}>
             <div className="flex justify-between ">
                 <div>
                     <p className="text-2xl font-medium">{project.project}</p>
