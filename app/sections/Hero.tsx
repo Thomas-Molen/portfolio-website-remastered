@@ -1,5 +1,6 @@
 // import Image from "next/image"
 import AchievementCard from "../components/AchievementCard"
+import _projects from "@/projects.json"
 
 export default function Hero() {
   return (
@@ -56,7 +57,7 @@ export default function Hero() {
         <div className="hidden md:block">
           <AchievementCard
             title="Completed Projects"
-            body="10+"
+            body={_projects.length.toString()}
             description="Across various domains and technologies"
             appearDelay="0.1s"
             icon={
