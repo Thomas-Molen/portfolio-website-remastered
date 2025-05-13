@@ -2,7 +2,7 @@ import CompanyCard from "../components/CompanyCard";
 
 export default function Companies() {
     return (
-        <>
+        <div className="container px-5">
             <div className="text-center mb-10">
                 <h2 className="text-3xl font-bold mb-3">Companies I have worked with</h2>
                 <p className="text-foreground-muted">I've had the privilege of collaborating with these organizations to deliver impactful solutions.</p>
@@ -15,6 +15,6 @@ export default function Companies() {
                 <CompanyCard company="PodoPrinter" link="https://podoprinter.com/" imageUrl="/assets/companies/podoprinter.png" />
                 <CompanyCard company="Author-e" link="https://www.authore.com/" imageUrl="/assets/companies/author-e.png" />
             </div>
-        </>
+        </div>
     )
 }

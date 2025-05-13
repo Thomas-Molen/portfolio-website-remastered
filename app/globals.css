@@ -17,10 +17,15 @@ body {
   color: var(--color-foreground);
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
+section:nth-of-type(even) {
+  background-color: var(--color-background-muted);
+  
 }
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+section .container {
+  @media (width >= 80rem /* 1280px */) {
+    max-width: var(--container-7xl) /* 80rem = 1280px */;
+  }
+
+  margin-inline: auto;
 }

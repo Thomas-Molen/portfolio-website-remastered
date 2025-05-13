@@ -9,28 +9,20 @@ export default function Page() {
   return (
     <div className="tracking-tight">
       <section id="landing" className="py-24">
-        <div className="container xl:max-w-7xl px-5 mx-auto">
-          <Hero />
-        </div>
+        <Hero />
       </section>
-      <section id="companies" className="bg-background-muted py-16">
-        <div className="container xl:max-w-7xl px-5 mx-auto">
-          <Companies />
-        </div>
+      <section id="companies" className="py-16">
+        <Companies />
       </section>
       <section id="about-me" className="py-16">
-        <div className="container xl:max-w-7xl px-5 mx-auto">
-          <AboutMe />
-        </div>
+        <AboutMe />
       </section>
-      <section className="bg-background-muted py-16">
+      <section className="py-16">
       </section>
       <section id="projects" className="py-16">
-        <div className="container xl:max-w-7xl px-5 mx-auto">
-          <Projects />
-        </div>
+        <Projects />
       </section>
-      <section id="contact" className="bg-background-muted py-24">
+      <section id="contact" className="py-24">
         <Contact />
       </section>
       <section id="footer">

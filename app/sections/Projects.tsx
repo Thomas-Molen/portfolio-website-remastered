@@ -16,7 +16,7 @@ export default function Projects() {
   ];
 
   return (
-    <>
+    <div className="container px-5">
       <h2 className="text-3xl font-bold text-center mb-12">Projects Showcase</h2>
       {/* Large displays */}
       <div className="hidden md:block">
@@ -29,7 +29,7 @@ export default function Projects() {
       <div className="block md:hidden">
         <GridView />
       </div>
-    </>
+    </div>
   );
 }
 

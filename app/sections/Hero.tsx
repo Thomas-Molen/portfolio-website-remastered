@@ -3,7 +3,7 @@ import AchievementCard from "../components/AchievementCard"
 
 export default function Hero() {
   return (
-    <>
+    <div className="container px-5">
       <div className="flex flex-col md:flex-row gap-16 items-center md:min-h-96 mb-12 sm:mb-18 md:mb-0">
         <div className="flex-1 space-y-4">
           <h1 className="text-6xl font-bold tracking-tight">
@@ -77,6 +77,6 @@ export default function Hero() {
             </svg>
           } />
       </div>
-    </>
+    </div>
   )
 }

@@ -3,13 +3,13 @@ import TechnologyOverview from "../components/TechnologyOverview";
 
 export default function AboutMe() {
     return (
-        <>
+        <div className="container px-5">
             <h2 className="text-3xl font-bold text-center mb-16">About Me</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-15">
                 <div className="text-lg font-medium space-y-4">
                     <p>
                         My name is Thomas Van der Molen, and I am a Dutch software engineer
-                        with a double major in <span className="text-primary">Software Engineering</span> & <span className="text-primary">Artificial Intelligence</span>
+                        with a double major in <span className="text-primary">Software Engineering</span> & <span className="text-primary">Artificial Intelligence</span>&nbsp;
                         from Fontys University of Applied Sciences, where I graduated summa cum laude.
                     </p>
                     <p>
@@ -37,6 +37,6 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
