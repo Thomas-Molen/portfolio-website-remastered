@@ -8,14 +8,14 @@ interface ProjectTimelineProps {
 }
 
 export function ProjectTimeline({ projects, onSelect, selectedProject }: ProjectTimelineProps) {
-  let lastProjectYear = new Date(projects[0].date.end).getFullYear();
   const isNewProjectYear = (project: Project): [boolean, number] => {
+    const projectIndex = projects.indexOf(project);
+
     const projectYear = new Date(project.date.end).getFullYear();
-    if (projectYear < lastProjectYear) {
-      lastProjectYear = projectYear;
-      return [true, projectYear];
-    }
-    return [false, projectYear];
+    if (projectIndex >= projects.length - 1) return [true, projectYear];
+
+    const nextProjectYear = new Date(projects[projectIndex + 1].date.end).getFullYear();
+    return [nextProjectYear < projectYear, projectYear];
   };
 
   return (
@@ -35,7 +35,7 @@ export function ProjectTimeline({ projects, onSelect, selectedProject }: Project
                 onClick={() => onSelect(project)}
               />
               {displayProjectYear && (
-                <div className="bg-primary/10 text-primary px-3 rounded-2xl mt-1 w-fit ml-[25%]">
+                <div className="bg-primary/10 text-primary px-3 rounded-2xl mt-1 w-fit">
                   {year}
                 </div>
               )}
