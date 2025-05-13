@@ -22,6 +22,48 @@
     "nda": true
   },
   {
+    "project": "Digital Statement Approval",
+    "company": "Info Support",
+    "body": [
+      "Developed a secure web-based system to digitize and streamline the monthly timesheet approval process for Info Support consultants and their clients.",
+      "The platform allows consultants to modify, group, and share statements for digital approval, ensuring data security and improving the user experience and time investment by simplifying the approval process."
+    ],
+    "technologies": [
+      ".NET",
+      "Blazor",
+      "EF Core",
+      "Hangfire",
+      "Mailkit",
+      "Docker",
+      "SQL Server",
+      "RabbitMQ",
+      "Azure",
+      "Entra ID"
+    ],
+    "date": {
+      "start": "2024-02",
+      "end": "2024-07"
+    },
+    "nda": false
+  },
+  {
+    "project": "Business-Oriented Software Development",
+    "company": "MK Educatie, Klantfocus, Simac | Author-e",
+    "body": [
+      "As a lead developer at Author-e, I played a key role in delivering efficient and maintainable software solutions for diverse business clients.",
+      "I architected new systems, maintained existing solutions, and collaborated closely with stakeholders to align solutions with evolving business needs."
+    ],
+    "technologies": [
+      ".NET",
+      "Blazor"
+    ],
+    "date": {
+      "start": "2022-08",
+      "end": "2024-01"
+    },
+    "nda": true
+  },
+  {
     "project": "Cloud Networking Threat Detection",
     "company": "SUE",
     "body": [
@@ -44,21 +86,28 @@
     "nda": false
   },
   {
-    "project": "Business-Oriented Software Development",
-    "company": "MK Educatie, Klantfocus, Simac | Author-e",
+    "project": "VocabVersus Web-game",
+    "company": "Education Sector",
     "body": [
-      "As a lead developer at Author-e, I played a key role in delivering efficient and maintainable software solutions for diverse business clients.",
-      "I architected new systems, maintained existing solutions, and collaborated closely with stakeholders to align solutions with evolving business needs."
+      "VocabVersus is a web-based multiplayer game where players submit words containing a prescribed set of letters. Points are awarded based on word complexity, speed, and rarity. Initially an engagement tool for schools, it has evolved into a competitive game for all.",
+      "The application minimizes client-server delay, with a dynamic scoring system that rewards rare words. Cloud-hosted and using Lucene and SignalR, it ensures scalability and cost efficiency."
     ],
     "technologies": [
       ".NET",
-      "Blazor"
+      "SignalR",
+      "React",
+      "Astro",
+      "Lucene",
+      "Docker",
+      "MySQL",
+      "Azure",
+      "Vercel"
     ],
     "date": {
-      "start": "2022-08",
-      "end": "2024-01"
+      "start": "2023-02",
+      "end": "2023-06"
     },
-    "nda": true
+    "nda": false
   },
   {
     "project": "Web-based 3D Printing Platform",
