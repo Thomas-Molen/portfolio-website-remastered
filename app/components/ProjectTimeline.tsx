@@ -8,18 +8,40 @@ interface ProjectTimelineProps {
 }
 
 export function ProjectTimeline({ projects, onSelect, selectedProject }: ProjectTimelineProps) {
+  let lastProjectYear = new Date(projects[0].date.end).getFullYear();
+  const isNewProjectYear = (project: Project): [boolean, number] => {
+    const projectYear = new Date(project.date.end).getFullYear();
+    if (projectYear < lastProjectYear) {
+      lastProjectYear = projectYear;
+      return [true, projectYear];
+    }
+    return [false, projectYear];
+  };
+
   return (
     <div className="relative">
-      <div className="absolute left-4 top-0 h-full w-px bg-muted transform -translate-x-1/2"></div>
+      {/* Line */}
+      <div className="absolute left-4 top-0 h-full w-px bg-muted transform -translate-x-1/2" style={{ zIndex: -1 }}></div>
+      {/* Record */}
+      <div className="space-y-4">
+        {projects.map((project, index) => {
+          const [displayProjectYear, year] = isNewProjectYear(project);
 
-      <div className="space-y-5">
-        {projects.map((project, index) => (
-          <TimelineItem
-            key={index}
-            project={project}
-            selected={project == selectedProject}
-            onClick={() => onSelect(project)} />
-        ))}
+          return (
+            <div key={index}>
+              <TimelineItem
+                project={project}
+                selected={project == selectedProject}
+                onClick={() => onSelect(project)}
+              />
+              {displayProjectYear && (
+                <div className="bg-primary/10 text-primary px-3 rounded-2xl mt-1 w-fit ml-[25%]">
+                  {year}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   )

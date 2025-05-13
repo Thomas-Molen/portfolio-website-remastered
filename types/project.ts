@@ -5,7 +5,7 @@ export default interface Project {
     technologies: string[];
     date: {
         start: string;
-        end: string | null;
+        end: string;
     };
     nda: boolean;
 }

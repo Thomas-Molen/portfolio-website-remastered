@@ -16,7 +16,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="container px-5">
+    <div className="container">
       <h2 className="text-3xl font-bold text-center mb-12">Projects Showcase</h2>
       {/* Large displays */}
       <div className="hidden md:block">
@@ -26,7 +26,7 @@ export default function Projects() {
         <ProjectView view={selectedView} />
       </div>
       {/* Small displays */}
-      <div className="block md:hidden">
+      <div className="block md:hidden px-3">
         <GridView />
       </div>
     </div>
