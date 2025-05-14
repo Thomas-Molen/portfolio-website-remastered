@@ -1,5 +1,6 @@
 import type React from "react"
 import type Project from "@/types/project"
+import Badge from "./Badge"
 
 interface ProjectTimelineProps {
   projects: Project[]
@@ -19,9 +20,9 @@ export function ProjectTimeline({ projects, onSelect, selectedProject }: Project
   };
 
   return (
-    <div className="relative">
+    <div className="relative ms-3">
       {/* Line */}
-      <div className="absolute left-4 top-0 h-full w-px bg-muted transform -translate-x-1/2" style={{ zIndex: -1 }}></div>
+      <div className="absolute left-4 top-0 h-[calc(100%-10px)] w-px bg-muted transform -translate-x-1/2" style={{ zIndex: -1 }}></div>
       {/* Record */}
       <div className="space-y-4">
         {projects.map((project, index) => {
@@ -35,7 +36,7 @@ export function ProjectTimeline({ projects, onSelect, selectedProject }: Project
                 onClick={() => onSelect(project)}
               />
               {displayProjectYear && (
-                <div className="bg-primary/10 text-primary px-3 rounded-2xl mt-1 w-fit">
+                <div className="bg-primary/10 text-primary px-2 rounded-2xl mt-1 w-fit -translate-x-[11px]">
                   {year}
                 </div>
               )}
