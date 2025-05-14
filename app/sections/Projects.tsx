@@ -7,6 +7,7 @@ import _projects from "@/projects.json"
 import type Project from "@/types/project"
 import { useSearchParams, useRouter } from "next/navigation";
 import { ViewOption, ViewSelector } from "../components/ViewSelector";
+import Scrollbar from "react-scrollbars-custom";
 
 export default function Projects() {
   const [selectedView, setSelectedView] = useState("timeline");
@@ -80,11 +81,17 @@ function TimelineView() {
       </div>
       <div className="col-span-4">
         {selectedProject ? (
-          <ProjectTimeline
-            projects={_projects}
-            onSelect={SelectProject}
-            selectedProject={selectedProject}
-          />
+          <Scrollbar
+            wrapperProps={{ style: { inset: '0px 10px 0px 0px' } }}
+            contentProps={{ style: { paddingRight: "5px" } }}
+            thumbYProps={{ style: { backgroundColor: "var(--color-muted)" } }}
+            trackYProps={{ style: { backgroundColor: "rgba(0,0,0,0.1)", top: "0px", height: "100%" } }}>
+            <ProjectTimeline
+              projects={_projects}
+              onSelect={SelectProject}
+              selectedProject={selectedProject}
+            />
+          </Scrollbar>
         ) : (
           <SkeletonProjectTimeline />
         )}
