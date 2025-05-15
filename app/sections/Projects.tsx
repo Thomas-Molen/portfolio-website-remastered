@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import ProjectCard, { SkeletonProjectCard } from "../components/ProjectCard"
 import { ProjectTimeline, SkeletonProjectTimeline } from "../components/ProjectTimeline";
 import _projects from "@/projects.json"
@@ -50,15 +50,21 @@ function ProjectView({ view }: ProjectViewProps) {
   )
 }
 
-
 function TimelineView() {
   const queryParams = useSearchParams();
   const router = useRouter();
+  const scrollbarRef = useRef<Scrollbar & HTMLDivElement | null>(null);
 
   // Determine initial selected project from query param
   const queryProject = queryParams.get("project");
-  const preferedProject = _projects.find(p => p.project === queryProject) ?? _projects[0];
-  const [selectedProject, setSelectedProject] = useState<Project>(preferedProject);
+  const preferredProject = _projects.find(p => p.project === queryProject) ?? _projects[0];
+  const [selectedProject, setSelectedProject] = useState<Project>(preferredProject);
+
+  useEffect(() => {
+    // Scroll to the prefered project when component first loads
+    scrollbarRef.current?.scrollTo(undefined, _projects.indexOf(preferredProject) * 65);
+  }, [])
+
 
   function SelectProject(project: Project) {
     setSelectedProject(project);
@@ -82,6 +88,7 @@ function TimelineView() {
       <div className="col-span-4">
         {selectedProject ? (
           <Scrollbar
+            ref={scrollbarRef}
             wrapperProps={{ style: { inset: '0px 10px 0px 0px' } }}
             contentProps={{ style: { paddingRight: "5px" } }}
             thumbYProps={{ style: { backgroundColor: "var(--color-muted)" } }}
