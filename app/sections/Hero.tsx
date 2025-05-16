@@ -1,12 +1,12 @@
-// import Image from "next/image"
 import AchievementCard from "../components/AchievementCard"
 import _projects from "@/projects.json"
+import Image from "next/image"
 
 export default function Hero() {
   return (
     <div className="container px-5">
-      <div className="flex flex-col md:flex-row gap-16 items-center md:min-h-96 mb-12 sm:mb-18 md:mb-0">
-        <div className="flex-1 space-y-4">
+      <div className="flex flex-row gap-16 items-center md:min-h-96 mb-12 sm:mb-18 md:mb-0">
+        <div className="flex-1 lg:flex-none space-y-4">
           <h1 className="text-6xl font-bold tracking-tight">
             Software Engineer & <br /><span className="text-primary">Consultant</span>
           </h1>
@@ -31,17 +31,17 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        {/* <div className="flex-1">
-          <div className="relative w-96 h-96 overflow-hidden">
+        <div className="hidden lg:flex flex-grow justify-center items-center">
+          <div className="relative w-80 h-80 bg-foreground rounded-full overflow-hidden">
             <Image
               src="/assets/profile-picture.png"
               alt="Thomas Van der Molen"
               fill
-              className=""
+              className="object-cover object-top"
               priority
             />
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-3">
         <AchievementCard
