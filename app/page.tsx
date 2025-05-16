@@ -17,13 +17,11 @@ export default function Page() {
       <section id="about-me" className="py-16">
         <AboutMe />
       </section>
-      <section className="py-16">
+      <section id="contact" className="py-12">
+        <Contact />
       </section>
       <section id="projects" className="py-16">
         <Projects />
-      </section>
-      <section id="contact" className="py-24">
-        <Contact />
       </section>
       <section id="footer">
         <Footer />
