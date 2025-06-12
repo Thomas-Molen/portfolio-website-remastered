@@ -32,7 +32,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hidden lg:flex flex-grow justify-center items-center">
-          <div className="relative w-80 h-80 bg-foreground rounded-full overflow-hidden">
+          <div className="relative w-80 h-80 bg-foreground/90 rounded-full overflow-hidden">
             <Image
               src="/assets/profile-picture.png"
               alt="Thomas Van der Molen"
