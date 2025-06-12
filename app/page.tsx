@@ -20,7 +20,7 @@ export default function Page() {
       <section id="contact" className="py-12">
         <Contact />
       </section>
-      <section id="projects" className="py-16">
+      <section id="projects" className="py-20">
         <Projects />
       </section>
       <section id="footer">

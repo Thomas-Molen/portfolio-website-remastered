@@ -78,14 +78,14 @@ function TimelineView() {
 
   return (
     <div className="hidden md:grid md:grid-cols-8 xl:grid-cols-10 gap-x-4 px-2">
-      <div className="col-span-4 h-[480px] lg:h-[420px]">
+      <div className="col-span-4 h-[500px] lg:h-[420px] mt-4">
         {selectedProject ? (
           <ProjectCard project={selectedProject} />
         ) : (
           <SkeletonProjectCard />
         )}
       </div>
-      <div className="col-span-4 xl:col-span-5 h-[480px]">
+      <div className="col-span-4 xl:col-span-5 h-[500px]">
         {selectedProject ? (
           <Scrollbar
             ref={scrollbarRef}
