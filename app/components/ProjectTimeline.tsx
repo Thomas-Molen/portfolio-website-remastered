@@ -56,14 +56,14 @@ interface TimelineItemProps {
 
 function TimelineItem({ project, selected, onClick }: TimelineItemProps) {
   return (
-    <div className={`relative flex items-start ${selected ? "" : "cursor-pointer"}`} onClick={() => onClick()}>
-      <div className="absolute left-4 transform -translate-x-1/2 flex items-center justify-center">
+    <div className={`relative flex items-center ${selected ? "" : "cursor-pointer"}`} onClick={() => onClick()}>
+      <div>
         <div className={`h-8 w-8 rounded-full border-2 ${selected ? "border-primary/40" : "border-muted"} flex items-center justify-center bg-background`}>
           <div className={`h-3 w-3 rounded-full transition-colors duration-300 ${selected ? "bg-primary" : "bg-foreground-muted"}`}></div>
         </div>
       </div>
 
-      <div className={`group flex justify-between items-center ml-10 px-4 rounded-lg w-full transition-normal duration-300 ${selected ? "" : " hover:"}bg-muted`}>
+      <div className={`group flex justify-between items-center ml-2 px-4 rounded-lg w-full transition-normal duration-300 ${selected ? "" : " hover:"}bg-muted`}>
         <div>
           <p className="text-foreground">{project.project}</p>
           <p className="text-sm text-foreground-muted">{project.company}</p>
