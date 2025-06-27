@@ -8,18 +8,16 @@ export default function AboutMe() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-15">
                 <div className="text-lg font-medium space-y-4">
                     <p>
-                        My name is Thomas Van der Molen, and I am a Dutch software engineer
-                        with a double major in <span className="text-primary">Software Engineering</span> & <span className="text-primary">Artificial Intelligence</span>&nbsp;
-                        from Fontys University of Applied Sciences, where I graduated summa cum laude.
+                        My name is <span className="text-primary">Thomas Van der Molen</span> and I am a Dutch full stack Software Engineer currently working at Info Support.
                     </p>
                     <p>
-                        Currently working as a Consultant at Info Support,
-                        I specialize in developing business-oriented solutions with a focus on scalability and maintainability.
-                        My expertise lies primarily in backend development with C# and .NET, along with robust DevOps pipelines and seamless Cloud integrations.
+                        I build business-oriented software solutions for a variety of clients and industries, often involving cloud environments, modern deployment strategies, and designing stable/maintainable software architecture.
                     </p>
                     <p>
-                        Throughout my career, I've collaborated with both small and large businesses,
-                        successfully investigating and executing projects across various domains alongside other like-minded, enthusiastic professionals.
+                        I studied <span className="text-primary">Software Engineering</span> and <span className="text-primary">Artificial Intelligence</span> at Fontys University of Applied Sciences, where I graduated summa cum laude.
+                    </p>
+                    <p>
+                        I enjoy solving complex technical challenges and working closely with my peers to create suitable solutions.
                     </p>
                     <div className="space-y-2 text-sm">
                         <Badge body="Microsoft Certified: Azure Developer (AZ-204)" />
