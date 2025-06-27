@@ -3,7 +3,7 @@ export default function Contact() {
         <div className="container px-5">
             <div className="text-center">
                 <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-                <p className="text-foreground-muted">Always happy to connect and chat. Feel free to reach out anytime.</p>
+                <p className="text-foreground-muted">Always happy to connect and chat. Feel free to reach out anytime!</p>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-x-4 gap-y-2 mt-6">
                 <a href="mailto:thomasmolenbusiness@gmail.com"
