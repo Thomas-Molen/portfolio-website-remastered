@@ -2,6 +2,7 @@
 
 @theme {
   --color-primary: #7c3aed;
+  --color-text-primary: #8F57EF;
   
   --color-foreground: #fafafa;
   --color-foreground-muted: #a1a1aa;
@@ -10,6 +11,10 @@
   --color-background-muted: #18181a;
 
   --color-muted: #27272a;
+}
+
+.text-primary {
+  color: var(--color-text-primary)
 }
 
 body {
