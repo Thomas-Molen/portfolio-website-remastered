@@ -20,7 +20,7 @@ export default function Projects() {
     <div className="container">
       <h2 className="text-3xl font-bold text-center mb-12">Projects Showcase</h2>
       {/* Large displays */}
-      <div className="hidden md:block">
+      <div className="hidden md:grid">
         <div className="justify-self-center w-64 mb-6">
           <ViewSelector options={viewOptions} selected={selectedView} onSelect={setSelectedView} />
         </div>
